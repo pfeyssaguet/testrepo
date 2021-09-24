@@ -36,6 +36,7 @@ jobs:
         run: |
           git add CHANGELOG.md
           git commit --message "Release ${{ github.event.inputs.version }}"
+          echo "LAST_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
       - name: Push changelog modifications to master
         run: git push origin master
@@ -45,6 +46,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          target_commitish: ${{ env.LAST_COMMIT }}
           tag_name: ${{ github.event.inputs.version }}
           name: Release ${{ github.event.inputs.version }}
           draft: false
