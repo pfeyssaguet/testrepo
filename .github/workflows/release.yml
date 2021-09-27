@@ -35,8 +35,7 @@ jobs:
         id: make-commit
         run: |
           curl -fsSL https://dprint.dev/install.sh | sh
-          /home/runner/.dprint/bin/dprint init
-          /home/runner/.dprint/bin/dprint fmt CHANGELOG.md
+          /home/runner/.dprint/bin/dprint -c .github/workflows/.dprintrc.json fmt CHANGELOG.md
           git add CHANGELOG.md
           git commit --message "Release ${{ github.event.inputs.version }}"
           echo "LAST_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
