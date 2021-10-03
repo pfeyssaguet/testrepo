@@ -20,11 +20,13 @@ class EntityTest extends AbstractEntityTest
             'standard' => [
                 'fields'   => [
                     'id'                         => 42,
+                    'bool'                       => true,
                     'nullableFieldPresentIfNull' => null,
                 ],
                 'expected' => <<<JSON
 {
     "id": 42,
+    "bool": true,
     "nullableFieldPresentIfNull": null
 }
 JSON
@@ -33,16 +35,17 @@ JSON
         ];
     }
 
-    public function testSetter(): void
+    public function testSetterAndGetter(): void
     {
         $entity = new MyEntity([
             'nullableFieldPresentIfNull' => null,
+            'bool'                       => true,
         ]);
 
+        self::assertTrue($entity->getBool());
+
         self::assertNull($entity->getId());
-
         $entity->setId(42);
-
         self::assertSame(42, $entity->getId());
     }
 }
@@ -51,9 +54,11 @@ JSON
  * Class MyEntity
  *
  * @method int|null getId()
+ * &method bool getBool()
  * @method string|null getNullableField()
  * @method string|null getNullableFieldPresentIfNull()
  * @method self setId(int $id)
+ * @method self setBool(bool $bool)
  * @method self setNullableField(string $nullableField)
  * @method self setNullableFieldPresentIfNull(string $nullableFieldPresentIfNull)
  */
@@ -65,6 +70,13 @@ class MyEntity extends AbstractEntity
      * @var int
      */
     protected $id;
+
+    /**
+     * @Property(type="bool", required=true)
+     *
+     * @var bool
+     */
+    protected $bool;
 
     /**
      * @Property(nullable=true)
