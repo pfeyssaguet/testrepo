@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.0] - 2021-10-03
+
 ### Added
 
 - Stuff for entities and workflows
@@ -42,7 +44,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - new changelog
 - new workflow to automate publish
 
-[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.6.0...HEAD
+[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.7.0...HEAD
+[0.7.0]: https://github.com/pfeyssaguet/testrepo/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/pfeyssaguet/testrepo/compare/0.5.0...0.6.0
 [0.5.0]: https://github.com/pfeyssaguet/testrepo/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/pfeyssaguet/testrepo/compare/0.3.1...0.4.0
