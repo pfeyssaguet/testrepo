@@ -1,4 +1,4 @@
-name: "Publish new release"
+name: "Automatic publish of new release"
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 
 jobs:
   release:
-    name: Publish new release
+    name: Automatic publish of new release
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
     steps:
@@ -18,6 +18,12 @@ jobs:
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
           VERSION=${BRANCH_NAME#release/}
           echo "RELEASE_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Get Changelog Entry
+        id: changelog_reader
+        uses: mindsers/changelog-reader-action@v2
+        with:
+          version: ${{ env.RELEASE_VERSION }}
 
       - name: Create Release
         uses: thomaseizinger/create-release@1.0.0
@@ -29,3 +35,4 @@ jobs:
           name: Release ${{ env.RELEASE_VERSION }}
           draft: false
           prerelease: false
+          body: ${{ steps.changelog_reader.outputs.changes }}
