@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.7.2] - 2021-10-04
+
 ### Added
 
 - Added a changelog checker so PR without modifications to the changelog file will be automatically blocked
@@ -55,7 +57,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - new changelog
 - new workflow to automate publish
 
-[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.7.1...HEAD
+[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.7.2...HEAD
+[0.7.2]: https://github.com/pfeyssaguet/testrepo/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/pfeyssaguet/testrepo/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/pfeyssaguet/testrepo/compare/0.6.0...0.7.0
 [0.6.0]: https://github.com/pfeyssaguet/testrepo/compare/0.5.0...0.6.0
