@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Use a personal token for  PR
+
 ## [0.7.0] - 2021-10-03
 
 ### Added
