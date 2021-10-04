@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true && startsWith(github.event.pull_request.head.ref, 'release/')
     steps:
+      - uses: actions/checkout@v2
+
       - name: Extract version from branch name (for release branches)
         run: |
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
