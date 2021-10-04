@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.1] - 2021-10-04
+
 ### Fixed
 
 - Fixed missing checkout from action
@@ -67,7 +69,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - new changelog
 - new workflow to automate publish
 
-[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.8.0...HEAD
+[Unreleased]: https://github.com/pfeyssaguet/testrepo/compare/0.8.1...HEAD
+[0.8.1]: https://github.com/pfeyssaguet/testrepo/compare/0.8.0...0.8.1
 [0.8.0]: https://github.com/pfeyssaguet/testrepo/compare/0.7.2...0.8.0
 [0.7.2]: https://github.com/pfeyssaguet/testrepo/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/pfeyssaguet/testrepo/compare/0.7.0...0.7.1
