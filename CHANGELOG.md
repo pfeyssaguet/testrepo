@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added a changelog checker so PR without modifications to the changelog file will be automatically blocked
+
 ## [0.7.1] - 2021-10-04
 
 ### Changed
